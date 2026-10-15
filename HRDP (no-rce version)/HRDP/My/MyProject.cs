@@ -1,0 +1,185 @@
+﻿using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.ApplicationServices;
+using Microsoft.VisualBasic.CompilerServices;
+using Microsoft.VisualBasic.MyServices.Internal;
+
+namespace Plugin.My
+{
+	// Token: 0x02000004 RID: 4
+	[StandardModule]
+	[HideModuleName]
+	[GeneratedCode("MyTemplate", "11.0.0.0")]
+	internal sealed class MyProject
+	{
+		// Token: 0x17000001 RID: 1
+		// (get) Token: 0x06000004 RID: 4 RVA: 0x0000208C File Offset: 0x0000028C
+		[HelpKeyword("My.Computer")]
+		internal static MyComputer Computer
+		{
+			[DebuggerHidden]
+			get
+			{
+				return MyProject.m_ComputerObjectProvider.GetInstance;
+			}
+		}
+
+		// Token: 0x17000002 RID: 2
+		// (get) Token: 0x06000005 RID: 5 RVA: 0x000020A8 File Offset: 0x000002A8
+		[HelpKeyword("My.Application")]
+		internal static MyApplication Application
+		{
+			[DebuggerHidden]
+			get
+			{
+				return MyProject.m_AppObjectProvider.GetInstance;
+			}
+		}
+
+		// Token: 0x17000003 RID: 3
+		// (get) Token: 0x06000006 RID: 6 RVA: 0x000020C4 File Offset: 0x000002C4
+		[HelpKeyword("My.User")]
+		internal static User User
+		{
+			[DebuggerHidden]
+			get
+			{
+				return MyProject.m_UserObjectProvider.GetInstance;
+			}
+		}
+
+		// Token: 0x17000004 RID: 4
+		// (get) Token: 0x06000007 RID: 7 RVA: 0x000020E0 File Offset: 0x000002E0
+		[HelpKeyword("My.WebServices")]
+		internal static MyProject.MyWebServices WebServices
+		{
+			[DebuggerHidden]
+			get
+			{
+				return MyProject.m_MyWebServicesObjectProvider.GetInstance;
+			}
+		}
+
+		// Token: 0x04000001 RID: 1
+		private static readonly MyProject.ThreadSafeObjectProvider<MyComputer> m_ComputerObjectProvider = new MyProject.ThreadSafeObjectProvider<MyComputer>();
+
+		// Token: 0x04000002 RID: 2
+		private static readonly MyProject.ThreadSafeObjectProvider<MyApplication> m_AppObjectProvider = new MyProject.ThreadSafeObjectProvider<MyApplication>();
+
+		// Token: 0x04000003 RID: 3
+		private static readonly MyProject.ThreadSafeObjectProvider<User> m_UserObjectProvider = new MyProject.ThreadSafeObjectProvider<User>();
+
+		// Token: 0x04000004 RID: 4
+		private static readonly MyProject.ThreadSafeObjectProvider<MyProject.MyWebServices> m_MyWebServicesObjectProvider = new MyProject.ThreadSafeObjectProvider<MyProject.MyWebServices>();
+
+		// Token: 0x0200000E RID: 14
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		[MyGroupCollection("System.Web.Services.Protocols.SoapHttpClientProtocol", "Create__Instance__", "Dispose__Instance__", "")]
+		internal sealed class MyWebServices
+		{
+			// Token: 0x06000030 RID: 48 RVA: 0x000035DC File Offset: 0x000017DC
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			[DebuggerHidden]
+			public override bool Equals(object o)
+			{
+				return base.Equals(RuntimeHelpers.GetObjectValue(o));
+			}
+
+			// Token: 0x06000031 RID: 49 RVA: 0x000035FC File Offset: 0x000017FC
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			[DebuggerHidden]
+			public override int GetHashCode()
+			{
+				return base.GetHashCode();
+			}
+
+			// Token: 0x06000032 RID: 50 RVA: 0x00003614 File Offset: 0x00001814
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			[DebuggerHidden]
+			internal new Type GetType()
+			{
+				return typeof(MyProject.MyWebServices);
+			}
+
+			// Token: 0x06000033 RID: 51 RVA: 0x00003630 File Offset: 0x00001830
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			[DebuggerHidden]
+			public override string ToString()
+			{
+				return base.ToString();
+			}
+
+			// Token: 0x06000034 RID: 52 RVA: 0x00003648 File Offset: 0x00001848
+			[DebuggerHidden]
+			private static T Create__Instance__<T>(T instance) where T : new()
+			{
+				bool flag = instance == null;
+				T result;
+				if (flag)
+				{
+					result = Activator.CreateInstance<T>();
+				}
+				else
+				{
+					result = instance;
+				}
+				return result;
+			}
+
+			// Token: 0x06000035 RID: 53 RVA: 0x00003671 File Offset: 0x00001871
+			[DebuggerHidden]
+			private void Dispose__Instance__<T>(ref T instance)
+			{
+				instance = default(T);
+			}
+
+			// Token: 0x06000036 RID: 54 RVA: 0x000033E8 File Offset: 0x000015E8
+			[DebuggerHidden]
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public MyWebServices()
+			{
+			}
+		}
+
+		// Token: 0x0200000F RID: 15
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		[ComVisible(false)]
+		internal sealed class ThreadSafeObjectProvider<T> where T : new()
+		{
+			// Token: 0x1700000C RID: 12
+			// (get) Token: 0x06000037 RID: 55 RVA: 0x0000367C File Offset: 0x0000187C
+			internal T GetInstance
+			{
+				[DebuggerHidden]
+				get
+				{
+					T t = this.m_Context.Value;
+					bool flag = t == null;
+					if (flag)
+					{
+						t = Activator.CreateInstance<T>();
+						this.m_Context.Value = t;
+					}
+					return t;
+				}
+			}
+
+			// Token: 0x06000038 RID: 56 RVA: 0x000036BD File Offset: 0x000018BD
+			[DebuggerHidden]
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public ThreadSafeObjectProvider()
+			{
+				this.m_Context = new ContextValue<T>();
+			}
+
+			// Token: 0x04000019 RID: 25
+			private readonly ContextValue<T> m_Context;
+		}
+	}
+}
